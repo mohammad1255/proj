@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القائمة المنسدلة</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .menu { width: 100%; position: fixed; bottom: -300px; left: 0; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.2); transition: bottom 0.3s; padding: 15px; border-radius: 10px 10px 0 0; }
+        .menu.show { bottom: 0; }
+        .btn { background: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>مرحباً بك في القائمة المنسدلة</h2>
+    <button class="btn" onclick="toggleMenu()">🔻 إظهار/إخفاء القائمة</button>
+
+    <div class="menu" id="menu">
+        <h3>📜 القائمة</h3>
+        <p>🟢 خيار 1</p>
+        <p>🟡 خيار 2</p>
+        <p>🔴 خيار 3</p>
+        <button class="btn" onclick="toggleMenu()">❌ إغلاق</button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
